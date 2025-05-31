@@ -1,0 +1,54 @@
+.home-container {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+/* Centraliza os cards e permite que quebrem em telas menores */
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+/* Estilo base de cada card */
+.card {
+  width: 380px;
+  padding: 25px;
+  border-radius: 15px;
+  color: #000000;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.card img {
+  width: 70px;
+  height: 70px;
+  margin-bottom: 15px;
+}
+
+/* Efeito ao passar o mouse */
+.card:hover {
+  transform: translateY(-6px);
+}
+
+
+.card-fisica {
+  background-color: #4a90e2;
+}
+
+.card-mental {
+  background-color: #f5a623;
+}
+
+.card-avaliacao {
+  background-color: #d96aa7;
+}
