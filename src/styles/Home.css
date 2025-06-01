@@ -1,54 +1,76 @@
+/* Garante que o body e html não tenham margens/paddings extras */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Container da home com imagem de fundo */
 .home-container {
+  min-height: 100vh;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh;
-  padding: 40px 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
+  justify-content: center;
+  align-items: flex-start; /* Alinha os cards no topo */
+  padding: 0;
 }
 
-/* Centraliza os cards e permite que quebrem em telas menores */
+/* Container dos cards */
 .card-container {
   display: flex;
   justify-content: center;
+  gap: 40px;
   flex-wrap: wrap;
-  gap: 30px;
+  margin-top: 300px; 
 }
 
-/* Estilo base de cada card */
+/* Estilo geral dos cards */
 .card {
-  width: 380px;
-  padding: 25px;
-  border-radius: 15px;
-  color: #000000;
-  text-align: center;
+  width: 400px;
+  padding: 20px;
+  border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  color: #000;
+  text-align: center;
   transition: transform 0.3s ease;
+  background-color: white; /* padrão, sobrescrito abaixo */
 }
 
-.card img {
-  width: 70px;
-  height: 70px;
-  margin-bottom: 15px;
-}
-
-/* Efeito ao passar o mouse */
-.card:hover {
-  transform: translateY(-6px);
-}
-
-
+/* Cores específicas dos cards */
 .card-fisica {
-  background-color: #4a90e2;
+  background-color: #4a90e2; /* azul */
 }
 
 .card-mental {
-  background-color: #f5a623;
+  background-color: #f5a623; /* amarelo */
 }
 
 .card-avaliacao {
-  background-color: #d96aa7;
+  background-color: #d16ba5; /* rosa */
+}
+
+/* Imagens dos cards */
+.card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+/* Efeito hover */
+.card:hover {
+  transform: translateY(-8px);
+}
+
+/* Título */
+.card h2 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Texto */
+.card p {
+  font-size: 0.95rem;
 }

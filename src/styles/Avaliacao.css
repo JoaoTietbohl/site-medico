@@ -1,0 +1,71 @@
+.avaliacao-page {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+.avaliacao-hero {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.avaliacao-banner {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+.avaliacao-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.avaliacao-title h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.avaliacao-title p {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.avaliacao-conteudo {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+}
+
+.avaliacao-conteudo h2, .avaliacao-conteudo h3 {
+  color: #00695c;
+}
+
+.avaliacao-conteudo p {
+  margin-bottom: 1.2rem;
+  line-height: 1.7;
+}
+
+.avaliacao-conteudo strong {
+  color: #00897b;
+}
+
+.dieta-button {
+  margin-top: 2rem;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dieta-button:hover {
+  background-color: #2b6cb0;
+}
+
