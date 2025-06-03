@@ -43,12 +43,13 @@ export default function Avaliacao() {
 
         <ImcCalculator />
 
-        {/* Botão para abrir modal de dieta */}
+        
         <button className="dieta-button" onClick={() => setModalAberto(true)}>
           📋 Ver sugestão de dieta
         </button>
 
         <DietaModal isOpen={modalAberto} onClose={() => setModalAberto(false)} />
+          
       </div>
     </div>
   );

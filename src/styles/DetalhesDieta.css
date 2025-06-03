@@ -1,0 +1,70 @@
+:root {
+  --verde-forte: #00695c;     /* para títulos, botões, ênfases */
+  --verde-fraco: #00897b;     /* para bordas, destaques leves */
+  --verde-fundo: #e0f2f1;     /* fundo da caixa de aviso */
+}
+
+.container {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 30px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.dieta-infos, .info-box {
+  flex: 1;
+  min-width: 320px;
+}
+
+
+
+button {
+  margin-top: 20px;
+  background-color: var(--verde-forte);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #004d40;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.info-box {
+  padding: 20px;
+  background-color: var(--verde-fundo);
+  border-left: 5px solid var(--verde-fraco);
+  border-radius: 4px;
+}
+
+.info-box p {
+  margin-bottom: 14px;
+}
+
+.info-box strong {
+  color: var(--verde-forte);
+}
+
+.destaque {
+  font-weight: bold;
+  color: var(--verde-fraco);
+}
+
+strong{
+    color: var(--verde-forte);
+}
+

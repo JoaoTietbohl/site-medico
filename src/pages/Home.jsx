@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";  // <-- Importa Link
+import { Link } from "react-router-dom"; // <-- Importa Link
 import "../styles/home.css";
 
 import fundoHome from "../assets/fundoHome.png";
@@ -11,17 +11,19 @@ const Home = () => {
   return (
     <div className="home-container" style={{ backgroundImage: `url(${fundoHome})` }}>
       <div className="card-container">
-        <div className="card card-fisica">
+
+        {/* Card clicável para Saúde Física */}
+        <Link to="/saudefisica" className="card card-fisica" style={{ textDecoration: "none", color: "inherit" }}>
           <img src={imgFisica} alt="Saúde Física" />
           <h2>Saúde Física</h2>
-        </div>
+        </Link>
 
         <div className="card card-mental">
           <img src={imgMental} alt="Saúde Mental" />
           <h2>Saúde Mental</h2>
         </div>
 
-
+        {/* Card clicável para Avaliação */}
         <Link to="/avaliacao" className="card card-avaliacao" style={{ textDecoration: "none", color: "inherit" }}>
           <img src={imgAvaliacao} alt="Avaliação de Saúde" />
           <h2>Avaliação de Saúde</h2>
