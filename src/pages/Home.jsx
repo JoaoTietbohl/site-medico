@@ -1,31 +1,44 @@
-import React from "react";
-import { Link } from "react-router-dom"; // <-- Importa Link
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import "../styles/home.css";
 
-import fundoHome from "../assets/fundoHome.png";
 import imgFisica from "../assets/peso.png";
 import imgMental from "../assets/saude-mental.png";
 import imgAvaliacao from "../assets/exame-de-saude.png";
 
 const Home = () => {
-  return (
-    <div className="home-container" style={{ backgroundImage: `url(${fundoHome})` }}>
-      <div className="card-container">
+  useEffect(() => {
+   
+    const link = document.createElement("link");
+    link.href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css";
+    link.rel = "stylesheet";
+    link.id = "bootstrap-css";
+    document.head.appendChild(link);
 
-        {/* Card clicável para Saúde Física */}
-        <Link to="/saudefisica" className="card card-fisica" style={{ textDecoration: "none", color: "inherit" }}>
-          <img src={imgFisica} alt="Saúde Física" />
+    return () => {
+
+      const existingLink = document.getElementById("bootstrap-css");
+      if (existingLink) {
+        existingLink.remove();
+      }
+    };
+  }, []);
+
+  return (
+    <div className="container-fluid bg-dark text-white min-vh-100 d-flex align-items-center">
+      <div className="row w-100 text-center">
+        <Link to="/saudefisica" className="col-md-4 p-4 card-home bg-fisica text-decoration-none text-white">
+          <img src={imgFisica} alt="Saúde Física" className="mb-3 card-img" />
           <h2>Saúde Física</h2>
         </Link>
 
-        <div className="card card-mental">
-          <img src={imgMental} alt="Saúde Mental" />
+        <div className="col-md-4 p-4 card-home bg-mental text-decoration-none text-white">
+          <img src={imgMental} alt="Saúde Mental" className="mb-3 card-img" />
           <h2>Saúde Mental</h2>
         </div>
 
-        {/* Card clicável para Avaliação */}
-        <Link to="/avaliacao" className="card card-avaliacao" style={{ textDecoration: "none", color: "inherit" }}>
-          <img src={imgAvaliacao} alt="Avaliação de Saúde" />
+        <Link to="/avaliacao" className="col-md-4 p-4 card-home bg-avaliacao text-decoration-none text-white">
+          <img src={imgAvaliacao} alt="Avaliação de Saúde" className="mb-3 card-img" />
           <h2>Avaliação de Saúde</h2>
         </Link>
       </div>

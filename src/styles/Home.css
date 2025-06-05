@@ -1,77 +1,34 @@
-/* Garante que o body e html não tenham margens/paddings extras */
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
-
-/* Container da home com imagem de fundo */
-.home-container {
+.card-home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   min-height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start; /* Alinha os cards no topo */
-  padding: 0;
+  transition: transform 0.9s ease, box-shadow 0.3s ease;
 }
 
-/* Container dos cards */
-.card-container {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-  margin-top: 300px; 
+.card-home:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(177, 168, 168, 0.15);
 }
 
-/* Estilo geral dos cards */
-.card {
-  width: 400px;
-  padding: 20px;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  color: #000;
-  text-align: center;
-  transition: transform 0.3s ease;
-  background-color: white; /* padrão, sobrescrito abaixo */
+.card-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
 }
 
-/* Cores específicas dos cards */
-.card-fisica {
-  background-color: #4a90e2; /* azul */
+
+.bg-fisica {
+  background: linear-gradient(135deg, #00438a, #1b263b);
 }
 
-.card-mental {
-  background-color: #f5a623; /* amarelo */
+.bg-mental {
+  background: linear-gradient(135deg, #8f52ff, #4c1d95);
 }
 
-.card-avaliacao {
-  background-color: #d16ba5; /* rosa */
+.bg-avaliacao {
+  background: linear-gradient(135deg, #00891b, #00695c);
 }
 
-/* Imagens dos cards */
-.card img {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 15px;
-}
-
-/* Efeito hover */
-.card:hover {
-  transform: translateY(-8px);
-}
-
-/* Título */
-.card h2 {
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-/* Texto */
-.card p {
-  font-size: 0.95rem;
-}
 

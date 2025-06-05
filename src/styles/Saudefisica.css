@@ -1,30 +1,16 @@
 .saude-fisica-page {
-  font-family: Arial, sans-serif;
-  background-color: #e6f0fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e6f1fb;
+  color: #0d1a26;
   min-height: 100vh;
   padding-bottom: 100px;
 }
 
-.header-image {
-  height: 350px;
- background-image: url('../assets/ativiades.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center bottom;
-  background-color: #003366;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
 .header-title {
-  color: #ffffff;
-  font-size: 2.5rem;
-  background-color: rgba(0, 51, 102, 0.7);
-  padding: 1rem 2rem;
-  border-radius: 12px;
-  text-shadow: 1px 1px 4px black;
+  color: #007acc;
+  font-size: 3rem;
+  text-align: center;
+  margin: 2rem auto;
 }
 
 .conteudo {
@@ -32,21 +18,22 @@
   margin: 2rem auto;
   padding: 2rem;
   background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0, 51, 102, 0.2);
-  color: #003366;
-  line-height: 1.6;
+  border-radius: 16px;
+  box-shadow: 0 0 25px rgba(0, 122, 204, 0.2);
+  line-height: 1.8;
 }
 
 .conteudo h2 {
-  color: #00509e;
+  color: #007acc;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  border-bottom: 1px solid #cce6f7;
+  padding-bottom: 0.5rem;
 }
 
 .conteudo ul {
-  margin-left: 1rem;
-  padding-left: 1rem;
+  padding-left: 1.5rem;
+  list-style-type: disc;
 }
 
 .conteudo li {
@@ -54,14 +41,14 @@
 }
 
 .destaque {
-  color: #003366;
+  color: #0099ff;
   font-weight: bold;
 }
 
 .aviso {
-  color: #cc0000;
-  background-color: #ffeaea;
-  border-left: 5px solid #cc0000;
+  color: #005580;
+  background-color: #d9f1ff;
+  border-left: 5px solid #007acc;
   padding: 1rem;
   border-radius: 8px;
   margin-top: 2rem;
@@ -69,9 +56,10 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  box-shadow: 0 0 10px rgba(0, 122, 204, 0.3);
 }
 
 .aviso::before {
-  content: "⚠️";
+  content: "💡";
   font-size: 1.5rem;
 }
