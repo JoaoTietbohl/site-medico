@@ -1,0 +1,129 @@
+/* Overlay */
+.quizmental-container {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Cartão */
+.quizmental-card {
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  padding: 24px 32px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  max-height: 85vh;
+  color: #333;
+}
+
+/* Título e subtítulo */
+.quizmental-titulo {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #7e57c2;
+}
+
+.quizmental-subtitulo {
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #5e35b1;
+  
+}
+
+/* Perguntas */
+.quizmental-pergunta h2 {
+  margin: 16px 0 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #5e35b1;
+}
+
+/* Botões de opções */
+.quizmental-opcao {
+  display: block;
+  width: 100%;
+  margin: 6px 0;
+  padding: 12px 14px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background: #f3e5f5;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.quizmental-opcao:hover {
+  background: #e1bee7;
+  border-color: #7e57c2;
+}
+
+.quizmental-opcao.selecionada {
+  border-color: #7e57c2;
+  background: #d1c4e9;
+}
+
+/* Botão principal */
+.quizmental-botao {
+  display: block;
+  width: 100%;
+  margin: 24px 0 0;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #7e57c2;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.quizmental-botao:hover {
+  background: #5e35b1;
+  transform: scale(1.02);
+}
+
+.quizmental-botao.desativado {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Resultado */
+.quizmental-resultado p {
+  margin: 8px 0 16px;
+  line-height: 1.5;
+  color: #444;
+}
+
+/* Botão de fechar (se quiser manter) */
+.quizmental-fechar,
+#quizmental-fechar {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  z-index: 10000;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.quizmental-fechar:hover {
+  transform: scale(1.2);
+  color: #e91e63;
+}
+#opcao-resposta {
+  color: #000;
+}
