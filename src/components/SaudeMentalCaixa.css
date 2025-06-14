@@ -1,0 +1,93 @@
+.caixa-saude-mental-container {
+  background-color: #f2eaff; /* roxo bem claro */
+  border: 1.5px solid #c8aaff;
+  border-radius: 16px;
+  padding: 24px;
+  max-width: 500px;
+  margin: 40px auto;
+  box-shadow: 0 6px 20px rgba(125, 97, 200, 0.1);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.caixa-saude-mental-titulo {
+  color: #5a2c91;
+  font-weight: 600;
+  margin-bottom: 16px;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.caixa-saude-mental-textarea {
+  width: 100%;
+  height: 120px;
+  border: 1px solid #d6c1ff;
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 1rem;
+  resize: none;
+  background-color: #fff;
+  color: #333;
+  margin-bottom: 16px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.caixa-saude-mental-textarea:focus {
+  border-color: #a176f2;
+}
+
+.caixa-saude-mental-textarea:disabled {
+  background-color: #f9f7ff;
+  opacity: 0.7;
+}
+
+.caixa-saude-mental-botao {
+  background: linear-gradient(135deg, #7f51d6, #a271f8);
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+.caixa-saude-mental-botao:hover {
+  background: linear-gradient(135deg, #6b3fbd, #8a5bf0);
+  transform: translateY(-2px);
+}
+
+.caixa-saude-mental-botao:disabled {
+  background: #bbb;
+  cursor: not-allowed;
+}
+
+/* 🔥 Animação de fogo */
+.fogo-animacao {
+  width: 60px;
+  height: 60px;
+  background: url("https://i.gifer.com/7efs.gif") no-repeat center;
+  background-size: contain;
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  animation: aparecerFogo 1.5s ease forwards;
+}
+
+@keyframes aparecerFogo {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

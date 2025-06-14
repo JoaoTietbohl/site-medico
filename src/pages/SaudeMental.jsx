@@ -1,6 +1,7 @@
 import { useState } from "react";
 import QuizMental from "../components/QuizMental";
-import "../styles/SaudeMental.css"
+import SaudeMentalCaixa from "../components/SaudeMentalCaixa"; // novo componente
+import "../styles/SaudeMental.css";
 
 export default function SaudeMental() {
   const [mostrarQuiz, setMostrarQuiz] = useState(false);
@@ -27,6 +28,11 @@ export default function SaudeMental() {
           <QuizMental fechar={() => setMostrarQuiz(false)} />
         </div>
       )}
+
+      {/* Caixa de pensamento no canto inferior direito */}
+      <div className="caixa-fixa-direita">
+        <SaudeMentalCaixa />
+      </div>
     </div>
   );
 }
