@@ -33,3 +33,19 @@
   width: 100%;
   text-align: center;
 }
+
+#botao_sono {
+    background: linear-gradient(45deg, #a259ff, #6a0dad);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+#botao_sono:hover {
+   background: linear-gradient(135deg, #5e35b1, #8a5bf0);
+  transform: translateY(-2px);
+}

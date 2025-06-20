@@ -40,6 +40,7 @@ export default function Avaliacao() {
 
         <h3>Vamos calcular seu IMC agora mesmo?</h3>
         <p>Use a ferramenta abaixo e dê o primeiro passo em direção a mais qualidade de vida!</p>
+        
 
         <ImcCalculator />
 

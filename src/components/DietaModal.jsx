@@ -30,43 +30,37 @@ const DietaModal = ({ isOpen, onClose }) => {
     const altura = parseFloat(height);
     const fator = activityFactors[activityLevel];
 
-    // Calcular TMB
     let tmb = 0;
     if (gender === "homem") {
-      tmb = 10 * peso + 6.25 * (altura * 100) - 5 * 25 + 5; // idade fixa 25
+      tmb = 10 * peso + 6.25 * (altura * 100) - 5 * 25 + 5;
     } else {
       tmb = 10 * peso + 6.25 * (altura * 100) - 5 * 25 - 161;
     }
 
-    // Calcular GET
     const get = tmb * fator;
 
-    // Calorias ajustadas
     const calorias = goal === "ganhar" ? get + 500 : get - 500;
 
-    // Macronutrientes (exemplo simplificado)
     const proteinas = Math.round((calorias * 0.3) / 4);
     const gorduras = Math.round((calorias * 0.3) / 9);
     const carboidratos = Math.round((calorias * 0.4) / 4);
 
-    // Enviar para página de detalhes
     navigate("/detalhes", {
-  state: {
-    sexo: gender,
-    objetivo: goal,
-    peso: weight,
-    altura: height,
-    atividade: activityLevel,
-    tmb: Math.round(tmb),
-    get: Math.round(get),
-    calorias: Math.round(calorias),
-    proteinas,
-    gorduras,
-    carboidratos,
-  },
-});
+      state: {
+        sexo: gender,
+        objetivo: goal,
+        peso: weight,
+        altura: height,
+        atividade: activityLevel,
+        tmb: Math.round(tmb),
+        get: Math.round(get),
+        calorias: Math.round(calorias),
+        proteinas,
+        gorduras,
+        carboidratos,
+      },
+    });
 
-    // Limpar
     setGender("");
     setGoal("");
     setWeight("");
@@ -78,29 +72,29 @@ const DietaModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="modal-overlay">
-      <div className="modal">
+    <div className="dieta-modal-overlay">
+      <div className="dieta-modal">
         <h2>Dieta Personalizada</h2>
 
         <p>Qual seu sexo?</p>
-        <div className="btn-group">
-          <button onClick={() => setGender("homem")} className={gender === "homem" ? "selected" : ""}>Homem</button>
-          <button onClick={() => setGender("mulher")} className={gender === "mulher" ? "selected" : ""}>Mulher</button>
+        <div className="dieta-btn-group">
+          <button onClick={() => setGender("homem")} className={gender === "homem" ? "dieta-selected" : ""}>Homem</button>
+          <button onClick={() => setGender("mulher")} className={gender === "mulher" ? "dieta-selected" : ""}>Mulher</button>
         </div>
 
         <p>Qual seu objetivo?</p>
-        <div className="btn-group">
-          <button onClick={() => setGoal("ganhar")} className={goal === "ganhar" ? "selected" : ""}>Ganhar peso</button>
-          <button onClick={() => setGoal("perder")} className={goal === "perder" ? "selected" : ""}>Perder peso</button>
+        <div className="dieta-btn-group">
+          <button onClick={() => setGoal("ganhar")} className={goal === "ganhar" ? "dieta-selected" : ""}>Ganhar peso</button>
+          <button onClick={() => setGoal("perder")} className={goal === "perder" ? "dieta-selected" : ""}>Perder peso</button>
         </div>
 
         <p>Nível de atividade física</p>
-        <div className="btn-group activity">
-          <button onClick={() => setActivityLevel("sedentario")} className={activityLevel === "sedentario" ? "selected" : ""}>Sedentário</button>
-          <button onClick={() => setActivityLevel("leve")} className={activityLevel === "leve" ? "selected" : ""}>Leve</button>
-          <button onClick={() => setActivityLevel("moderado")} className={activityLevel === "moderado" ? "selected" : ""}>Moderado</button>
-          <button onClick={() => setActivityLevel("ativo")} className={activityLevel === "ativo" ? "selected" : ""}>Ativo</button>
-          <button onClick={() => setActivityLevel("muitoAtivo")} className={activityLevel === "muitoAtivo" ? "selected" : ""}>Muito Ativo</button>
+        <div className="dieta-btn-group dieta-activity">
+          <button onClick={() => setActivityLevel("sedentario")} className={activityLevel === "sedentario" ? "dieta-selected" : ""}>Sedentário</button>
+          <button onClick={() => setActivityLevel("leve")} className={activityLevel === "leve" ? "dieta-selected" : ""}>Leve</button>
+          <button onClick={() => setActivityLevel("moderado")} className={activityLevel === "moderado" ? "dieta-selected" : ""}>Moderado</button>
+          <button onClick={() => setActivityLevel("ativo")} className={activityLevel === "ativo" ? "dieta-selected" : ""}>Ativo</button>
+          <button onClick={() => setActivityLevel("muitoAtivo")} className={activityLevel === "muitoAtivo" ? "dieta-selected" : ""}>Muito Ativo</button>
         </div>
 
         <p>Informe seus dados</p>
@@ -134,8 +128,8 @@ const DietaModal = ({ isOpen, onClose }) => {
           }}
         />
 
-        <div className="btn-group">
-          <button className="back" onClick={onClose}>Cancelar</button>
+        <div className="dieta-btn-group">
+          <button className="dieta-back" onClick={onClose}>Cancelar</button>
           <button onClick={handleSubmit}>Calcular</button>
         </div>
       </div>

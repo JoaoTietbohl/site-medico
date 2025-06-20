@@ -35,7 +35,7 @@ export default function SaudeMental() {
           <p>
             Este quiz foi desenvolvido por um estudante de Análise e Desenvolvimento de Sistemas com o objetivo de incentivar a reflexão sobre o bem-estar mental.
             <br /><br />
-            ⚠️ <strong>Este conteúdo não substitui a ajuda profissional.</strong> Se você sente que precisa de apoio, procure um psicólogo ou profissional da saúde mental.
+            ⚠️ <strong id="triangulo">Este conteúdo não substitui a ajuda profissional.</strong> Se você sente que precisa de apoio, procure um psicólogo ou profissional da saúde mental.
           </p>
 
           <button

@@ -57,7 +57,7 @@
 }
 
 .caixa-saude-mental-botao:hover {
-  background: linear-gradient(135deg, #6b3fbd, #8a5bf0);
+  background: linear-gradient(135deg, #5e35b1, #8a5bf0);
   transform: translateY(-2px);
 }
 

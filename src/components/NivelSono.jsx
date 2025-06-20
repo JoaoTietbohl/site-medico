@@ -37,7 +37,7 @@ const NivelSono = () => {
 
   return (
     <div className="nivel-sono-container">
-      <button className="abrir-modal-btn" onClick={abrirModal}>
+      <button id='botao_sono' onClick={abrirModal}>
         Avaliar Nível de Sono
       </button>
 

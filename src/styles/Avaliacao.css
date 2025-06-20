@@ -53,10 +53,10 @@
 }
 
 .dieta-button {
-  margin-top: 2rem;
+  margin-left: 16px; /* empurra o botão para a direita, alinhando com o anterior */
   padding: 0.7rem 1.5rem;
   font-size: 1rem;
-  background-color: #4299e1;
+  background-color: #28a745;
   color: white;
   border: none;
   border-radius: 8px;
@@ -66,6 +66,5 @@
 }
 
 .dieta-button:hover {
-  background-color: #2b6cb0;
+  background-color: #00695c;
 }
-
