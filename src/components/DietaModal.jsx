@@ -97,36 +97,37 @@ const DietaModal = ({ isOpen, onClose }) => {
           <button onClick={() => setActivityLevel("muitoAtivo")} className={activityLevel === "muitoAtivo" ? "dieta-selected" : ""}>Muito Ativo</button>
         </div>
 
-        <p>Informe seus dados</p>
-        <input
-          type="text"
-          placeholder="Peso (ex: 80.5)"
-          value={weight}
-          onChange={(e) => {
-            let val = e.target.value.replace(/[^0-9.]/g, '');
-            const parts = val.split('.');
-            if (parts.length > 2) return;
-            if (parts[0].length > 3) parts[0] = parts[0].slice(0, 3);
-            if (parts[1]?.length > 3) parts[1] = parts[1].slice(0, 3);
-            const formatted = parts.length === 2 ? `${parts[0]}.${parts[1]}` : parts[0];
-            setWeight(formatted);
-          }}
-          maxLength={7}
-        />
-
-        <input
-          type="text"
-          placeholder="Altura (ex: 1.75)"
-          value={height}
-          maxLength={4}
-          onChange={(e) => {
-            let val = e.target.value.replace(/[^0-9]/g, "");
-            if (val.length <= 3) {
-              if (val.length > 1) val = val.slice(0, 1) + "." + val.slice(1);
-              setHeight(val);
-            }
-          }}
-        />
+       <p>Informe seus dados</p>
+<div className="dieta-input-group">
+  <input
+    type="text"
+    placeholder="Peso (ex: 80.5)"
+    value={weight}
+    onChange={(e) => {
+      let val = e.target.value.replace(/[^0-9.]/g, '');
+      const parts = val.split('.');
+      if (parts.length > 2) return;
+      if (parts[0].length > 3) parts[0] = parts[0].slice(0, 3);
+      if (parts[1]?.length > 3) parts[1] = parts[1].slice(0, 3);
+      const formatted = parts.length === 2 ? `${parts[0]}.${parts[1]}` : parts[0];
+      setWeight(formatted);
+    }}
+    maxLength={7}
+  />
+  <input
+    type="text"
+    placeholder="Altura (ex: 1.75)"
+    value={height}
+    onChange={(e) => {
+      let val = e.target.value.replace(/[^0-9]/g, "");
+      if (val.length <= 3) {
+        if (val.length > 1) val = val.slice(0, 1) + "." + val.slice(1);
+        setHeight(val);
+      }
+    }}
+    maxLength={4}
+  />
+</div>
 
         <div className="dieta-btn-group">
           <button className="dieta-back" onClick={onClose}>Cancelar</button>

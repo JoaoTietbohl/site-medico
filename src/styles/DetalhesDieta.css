@@ -1,10 +1,10 @@
 :root {
-  --verde-forte: #00695c;     /* para títulos, botões, ênfases */
-  --verde-fraco: #00897b;     /* para bordas, destaques leves */
-  --verde-fundo: #e0f2f1;     /* fundo da caixa de aviso */
+  --verde-forte: #00695c;
+  --verde-fraco: #00897b;
+  --verde-fundo: #e0f2f1;
 }
 
-.container {
+#detalhes-dieta-container {
   max-width: 1100px;
   margin: 60px auto;
   padding: 30px;
@@ -17,14 +17,13 @@
   flex-wrap: wrap;
 }
 
-.dieta-infos, .info-box {
+#detalhes-dieta-infos,
+#detalhes-dieta-info-box {
   flex: 1;
   min-width: 320px;
 }
 
-
-
-button {
+#detalhes-dieta-btn-voltar {
   margin-top: 20px;
   background-color: var(--verde-forte);
   color: #fff;
@@ -35,36 +34,39 @@ button {
   transition: background 0.3s ease;
 }
 
-button:hover {
+#detalhes-dieta-btn-voltar:hover {
   background-color: #004d40;
 }
 
-ul {
+#detalhes-dieta-macros {
   list-style-type: disc;
   padding-left: 20px;
 }
 
-.info-box {
+#detalhes-dieta-info-box {
   padding: 20px;
   background-color: var(--verde-fundo);
   border-left: 5px solid var(--verde-fraco);
   border-radius: 4px;
 }
 
-.info-box p {
+#detalhes-dieta-info-box p {
   margin-bottom: 14px;
 }
 
-.info-box strong {
+#detalhes-dieta-info-box strong {
   color: var(--verde-forte);
 }
 
-.destaque {
+.detalhes-dieta-destaque {
   font-weight: bold;
   color: var(--verde-fraco);
 }
 
-strong{
-    color: var(--verde-forte);
+strong {
+  color: var(--verde-forte);
 }
 
+#Informaçoes strong{
+  color: var(--verde-forte);
+}

@@ -1,5 +1,5 @@
 .caixa-saude-mental-container {
-  background-color: #f2eaff; /* roxo bem claro */
+  background-color: #f2eaff;
   border: 1.5px solid #c8aaff;
   border-radius: 16px;
   padding: 24px;
@@ -66,16 +66,23 @@
   cursor: not-allowed;
 }
 
-/* 🔥 Animação de fogo */
-.fogo-animacao {
-  width: 60px;
-  height: 60px;
-  background: url("https://i.gifer.com/7efs.gif") no-repeat center;
-  background-size: contain;
+/* 🔥 Fogo + texto queimando */
+.fogo-area {
   position: absolute;
   bottom: 12px;
   right: 12px;
-  animation: aparecerFogo 1.5s ease forwards;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 🔥 Animação de fogo */
+.fogo-animacao {
+  width: 50px;
+  height: 50px;
+  background: url("https://i.gifer.com/7efs.gif") no-repeat center;
+  background-size: contain;
+  animation: aparecerFogo 2s ease forwards;
 }
 
 @keyframes aparecerFogo {
@@ -89,5 +96,38 @@
   100% {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+/* ✨ Texto queimando */
+.texto-queimando {
+  color: #333;
+  font-weight: bold;
+  animation: queimarTexto 2s forwards;
+  font-size: 0.9rem;
+  max-width: 120px;
+  word-break: break-word;
+}
+
+@keyframes queimarTexto {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0deg);
+    filter: none;
+  }
+  30% {
+    opacity: 0.8;
+    transform: translateY(-5px) rotate(-2deg);
+    filter: blur(1px);
+  }
+  60% {
+    opacity: 0.5;
+    transform: translateY(-15px) scale(1.1) rotate(2deg);
+    filter: blur(3px) brightness(1.3);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-30px) scale(1.2) rotate(5deg);
+    filter: blur(6px) brightness(1.5);
   }
 }

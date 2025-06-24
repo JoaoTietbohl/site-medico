@@ -13,7 +13,7 @@ export default function Avaliacao() {
         <img src={avaliacaoBanner} alt="Família saudável" className="avaliacao-banner" />
         <div className="avaliacao-title">
           <h1>Avaliação Física</h1>
-          <p>Cálculo de IMC e orientação para seu bem-estar!</p>
+          <p>Cálculo de IMC e orientação de dieta para seu bem-estar!</p>
         </div>
       </div>
 

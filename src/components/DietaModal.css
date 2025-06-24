@@ -1,5 +1,6 @@
 /* src/styles/DietaModal.css */
-.modal-overlay {
+
+.dieta-modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -12,7 +13,7 @@
   z-index: 1000;
 }
 
-.modal {
+.dieta-modal {
   background: #fff;
   padding: 2rem;
   border-radius: 10px;
@@ -21,21 +22,27 @@
   text-align: center;
 }
 
-.step button,
-.btn-group button {
+.dieta-btn-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.dieta-btn-group button {
   margin: 0.5rem;
   padding: 0.5rem 1rem;
   font-weight: bold;
   border: none;
   border-radius: 6px;
-  background-color: #48bb78;
+  background-color: #09b111;
   color: white;
   cursor: pointer;
   transition: 0.2s;
 }
 
-.step input,
-.modal input {
+.dieta-input {
   display: block;
   margin: 0.5rem auto;
   padding: 0.5rem;
@@ -44,26 +51,40 @@
   border: 1px solid #ccc;
 }
 
-.btn-group {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 1rem;
-}
-
-.back {
+.dieta-back {
   background-color: #aaa !important;
 }
 
-.selected {
-  background-color: #2f855a !important;
+.dieta-selected {
+  background-color: #00695c !important;
 }
 
-.detalhes {
+.dieta-detalhes {
   margin-top: 10px;
   padding: 10px;
   background: #f0f0f0;
   border-radius: 8px;
   font-size: 0.9em;
+}
+
+.dieta-input-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0.8rem 0;
+}
+
+.dieta-input-group input {
+  padding: 0.5rem 0.8rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.2s;
+  width: 130px;
+  font-size: 1rem;
+}
+
+.dieta-input-group input:focus {
+  border-color: #38a169;
+  box-shadow: 0 0 5px rgba(56, 161, 105, 0.6);
 }

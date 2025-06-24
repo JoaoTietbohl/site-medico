@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import '../styles/DetalhesDieta.css'
+import '../styles/DetalhesDieta.css';
 
 const DetalhesDieta = () => {
   const location = useLocation();
@@ -22,18 +22,22 @@ const DetalhesDieta = () => {
 
   if (!location.state) {
     return (
-      <div className="container">
-        <h2>Nenhum dado recebido</h2>
-        <p>Por favor, volte e preencha os dados corretamente.</p>
-        <button onClick={() => navigate('/')}>Voltar para o início</button>
+      <div id="detalhes-dieta-container">
+        <h2 id="detalhes-dieta-titulo">Nenhum dado recebido</h2>
+        <p id="detalhes-dieta-aviso">Por favor, volte e preencha os dados corretamente.</p>
+        <button id="detalhes-dieta-btn-voltar" onClick={() => navigate('/')}>
+          Voltar para o início
+        </button>
       </div>
     );
   }
 
   return (
-    <div className="container">
-      <div className="dieta-infos">
-        <h2>Informações Detalhadas da Dieta</h2>
+    <div id="detalhes-dieta-container">
+      <div id="detalhes-dieta-infos">
+        <h2 id="detalhes-dieta-titulo">Informações Detalhadas da Dieta</h2>
+
+<div id='Informaçoes'>
         <p><strong>Sexo:</strong> {sexo}</p>
         <p><strong>Objetivo:</strong> {objetivo}</p>
         <p><strong>Peso:</strong> {peso} kg</p>
@@ -43,17 +47,19 @@ const DetalhesDieta = () => {
         <p><strong>GET (Gasto Energético Total):</strong> {get} kcal</p>
         <p><strong>Calorias diárias recomendadas:</strong> {calorias} kcal</p>
 
-        <h3>Macronutrientes:</h3>
-        <ul>
+        <h3 id="detalhes-dieta-subtitulo">Macronutrientes:</h3>
+        <ul id="detalhes-dieta-macros">
           <li><strong>Proteínas:</strong> {proteinas} g</li>
           <li><strong>Gorduras:</strong> {gorduras} g</li>
           <li><strong>Carboidratos:</strong> {carboidratos} g</li>
         </ul>
-
-        <button onClick={() => navigate(-1)}>Voltar</button>
+</div>
+        <button id="detalhes-dieta-btn-voltar" onClick={() => navigate(-1)}>
+          Voltar
+        </button>
       </div>
 
-      <section className="info-box">
+      <section id="detalhes-dieta-info-box">
         <h3>Nota Importante</h3>
         <p>
           Esta dieta apresenta uma estimativa geral dos macronutrientes que seu corpo pode precisar, com base nas informações fornecidas.
@@ -72,7 +78,7 @@ const DetalhesDieta = () => {
           Imagine seu corpo como uma casa em construção: <strong>a dieta é o cimento</strong> que sustenta,
           <strong>os exercícios são os tijolos</strong> que estruturam.
         </p>
-        <p className="destaque">
+        <p className="detalhes-dieta-destaque">
           Cuide de você com responsabilidade. Alimentação saudável, atividade física e acompanhamento profissional são os pilares para uma vida equilibrada. 🌿
         </p>
       </section>
