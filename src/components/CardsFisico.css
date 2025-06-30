@@ -118,3 +118,41 @@ label {
   color: #004466;
 }
 
+@media (max-width: 768px) {
+  .cards-fisico-container {
+    gap: 12px;
+    padding: 20px;
+  }
+
+  .card-fisico {
+    width: 140px;
+    padding: 16px;
+  }
+
+  .card-fisico img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .card-fisico h3 {
+    font-size: 1rem;
+  }
+
+  .modal {
+    padding: 20px;
+  }
+
+  .modal h2 {
+    font-size: 1.2rem;
+  }
+
+  .modal p {
+    font-size: 0.95rem;
+  }
+
+  .modal button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+}

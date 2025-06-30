@@ -1,24 +1,25 @@
-/* Layout principal com espaçamento mais agradável */
+/* Layout principal */
 .pagina-saude-mental {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   padding: 2rem 3rem;
-  gap: 6rem; /* mais espaço entre colunas */
+  gap: 6rem;
   background-color: #f3f4f6;
   min-height: 100vh;
   box-sizing: border-box;
 }
+
+/* Colunas */
 .coluna-central {
-  width: 500px;               
-  margin-top: 0; /* no topo mesmo */
+  width: 500px;
+  margin-top: 0;
 }
 
 .coluna-esquerda,
 .coluna-direita {
   width: 600px;
-  height: 300px;        /* mais largas */
-  margin-top: 20rem; /* desce as laterais */
+  margin-top: 20rem;
 }
 
 /* Card da saúde mental */
@@ -47,7 +48,7 @@
   margin-bottom: 2rem;
 }
 
-/* Botão */
+/* Botão do quiz */
 .saude-mental-botao {
   background-color: #9333ea;
   color: white;
@@ -131,6 +132,62 @@
   background-color: #9333ea;
 }
 
-#triangulo{
+#triangulo {
   color: #5e35b1;
+}
+
+/* ==========================
+   📱 Responsivo: até 768px
+   ========================== */
+@media (max-width: 768px) {
+  .pagina-saude-mental {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    gap: 2rem;
+  }
+
+  .coluna-esquerda,
+  .coluna-central,
+  .coluna-direita {
+    width: 100%;
+    max-width: 500px;
+    margin-top: 0;
+    height: auto;
+  }
+
+  .saude-mental-container,
+  .sono-container,
+  .caixa-fixa-direita {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .saude-mental-botao,
+  .caixa-fixa-direita button {
+    width: 100%;
+  }
+
+  .caixa-fixa-direita textarea {
+    height: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  #detalhes-dieta-container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  #detalhes-dieta-infos,
+  #detalhes-dieta-info-box {
+    min-width: 100%;
+  }
+
+  #detalhes-dieta-btn-voltar {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
 }
